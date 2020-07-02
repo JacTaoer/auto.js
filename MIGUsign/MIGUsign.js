@@ -73,8 +73,9 @@ function readBook(){
          text("搜索").findOne().click();
         sleep(3500);
          
-         //点击活动页面进入
-        click(400,height/5);
+         //点击“天天爱阅读”进入
+        //click(400,height/5);
+        className("android.view.View").text("%E6%90%9C%E7%B4%A2%E5%8F%A3%E4%BB%A4%E5%9B%BE").findOne().click();
         sleep(3000);
          
         //找到“签到”控件点击
