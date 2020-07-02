@@ -1,3 +1,5 @@
+//请在下方BookName引号内输入对应书籍名
+var BookName="人间失格";
 var startTime = new Date().getTime();
 var excTime = 0;
 var sleepTime = 0;
@@ -17,15 +19,16 @@ sign();
 //进入咪咕进行阅读任务
 function readBook(){
         
-        //自动打开咪咕阅读APP
+        //自动打开咪咕阅读APP，考虑到部分机型及广告，所以设置为15秒等待
         app.launchApp("咪咕阅读");
-        log("正在打开咪咕阅读,等待10秒");
-        sleep(14000);
+        log("正在打开咪咕阅读,等待15秒");
+        sleep(15000);
         log("**正在进入书架**");
         
         //通过“书架”控件属性进行点击
-        packageName("com.ophone.reader.ui").clickable().className("android.widget.FrameLayout").drawingOrder(24).find().click();
-        
+        //packageName("com.ophone.reader.ui").clickable().className("android.widget.FrameLayout").drawingOrder(24).find().click();
+        //或者采用返回键，也可以进入到书架
+        back();
         sleep(1500);
         
         //获取用户输入图书名，点击
