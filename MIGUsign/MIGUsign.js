@@ -24,8 +24,8 @@ function readBook(){
         log("**正在进入书架**");
         
         //通过“书架”控件属性进行点击
-        var a=packageName("com.ophone.reader.ui").clickable().className("android.widget.FrameLayout").drawingOrder(24).find();
-        a.click();
+        packageName("com.ophone.reader.ui").clickable().className("android.widget.FrameLayout").drawingOrder(24).find().click();
+        
         sleep(1500);
         
         //获取用户输入图书名，点击
