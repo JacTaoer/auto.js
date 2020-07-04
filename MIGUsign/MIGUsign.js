@@ -31,10 +31,10 @@ function readBook(){
         back();
         sleep(1500);
         
-        //获取用户输入图书名，点击
+        //通过获取用户输入图书名，点击
         //var Book = rawInput("请输入书架上的图书名：");
         //text(Book).findOne().parent().click();
-        //获取开头设置的书籍名，从而打开对应书籍
+        //或者通过获取开头设置的书籍名，从而打开对应书籍
         text(BookName).findOne().parent().click();
         sleep(3000); 
         //开始自动阅读模式
